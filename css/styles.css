@@ -1,0 +1,353 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+
+
+
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+ 
+}
+
+header nav{
+        
+        display: flex;
+        justify-content: space-around;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        align-items: center;
+        background-color: #1A0B2E;
+        color: #FFFFFF;
+        border-bottom: 2px solid #351165;
+       
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.color{
+    
+}
+
+
+nav ul a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+nav ul a:hover{
+          
+    color: #FB09B4;
+    transition: all 0.3s ease;
+
+}
+
+.btn{
+    display: flex;
+    gap: 10px;
+}
+
+.btn button{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+    padding: 13px 16px;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+      background: linear-gradient(
+    90deg,
+    #F7E93F,
+    #FB09B4,
+    #9100F8
+  )
+
+  
+    
+    
+}
+
+
+.btn button:hover{
+    background: #00FF88;
+    transition: all 0.3s ease ;
+    color: #1A0B2E;
+    
+}
+
+
+
+.btnn{
+    display: flex;
+    gap: 8px;
+    margin-top: 24px;
+    margin-bottom: 100px;
+
+}
+
+.btnn .btn1{
+       display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #FFFFFF;
+    padding: 13px 16px;
+    border-radius: 50px;
+    border: none;
+    text-align: center;
+      background: linear-gradient(
+    90deg,
+    #F7E93F,
+    #FB09B4,
+    #9100F8
+  )
+
+
+}
+
+.btnn .btn1:hover{
+    background: #00FF88;
+    transition: all 0.3s ease ;
+    color: #1A0B2E;
+}
+
+
+.btnn .btn2{
+
+    border: 2px solid #00FF88;
+    padding: 13px 16px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background-color: transparent;
+    color: #00FF88;
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+
+.btnn .btn2:hover{
+    background-color: #FFFFFF;
+    color: black;
+    transform: all 0.3s ease;
+}
+
+
+
+
+
+.btn button span{
+    font-size: 16px;
+}
+
+.btn button .btn2{
+    border: 3px solid green;
+
+}
+
+
+
+
+
+#banner{
+    width: 100%;
+    background-image: url("../assets/hero-bg.png");
+    
+    max-height:800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+.banner-middle{
+    margin-top: 100px;
+}
+
+#banner h2{
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 60px;
+}
+
+#banner p{
+    color: #FFFFFF;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.box{
+    position: relative;
+
+}
+
+.microphone{
+    top: -260px;
+    right: -110px;
+    
+}
+
+
+#About{
+    width:100%;
+     background-color: #1A0B2E;
+     height: 600px;
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+.about-content{
+    width: 70%;
+    border-bottom: 2px solid #351165;
+    margin-top: 50px;
+    padding-bottom: 80px;
+    margin-bottom: 80px;
+}
+
+
+.about-content h2{
+    color: #FFFFFF;
+    font-size: 48px;
+
+
+
+}
+
+.about-content p{
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 30px;
+    width: 700px;
+    margin:  0 auto;
+    margin-top: 16px;
+
+}
+
+.text{
+    display: block;
+    margin-top: 20px;
+}
+
+.about-number{
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    
+}
+.about-item h2{
+    color:#00FF88 ;
+    font-size: 48px;
+    font-weight:900;
+}
+
+.about-item p{
+    color:#FFFFFF ;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.why{
+    width:100%;
+    background-color: #230E3D;
+
+
+}
+
+.why-us{
+    width: 1100px;
+    margin: 0 auto;
+    background-color: #230E3D;
+    
+    
+    
+}
+
+.why-us h2{
+    font-size: 48px ;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: center;
+    padding-bottom: 40px;
+    padding-top: 120px;
+}
+
+
+.common{
+    background-color: #351165 ;
+    border: 1px solid #351165 ;
+    margin: 10px;
+    padding: 80px 40px;
+    border-radius: 40px;
+    
+    
+    
+}
+
+.common h4{
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-top: 16px;
+}
+
+.common p{
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-top: 16px;
+    
+}
+
+.card1{
+    grid-area: card1;
+}
+
+
+.card2{
+    grid-area: card2;
+}
+
+.card3{
+    grid-area: card3;
+}
+
+.card4{
+    grid-area: card4;
+}
+
+.card5{
+    grid-area: card5;
+}
+
+.why-card{
+    display: grid;
+    grid-template-areas: " card1 card2 card2" 
+                        " card1 card3 card3"
+                        " card4 card4 card5"
+                           ;
+}
