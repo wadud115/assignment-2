@@ -19,8 +19,8 @@
 }
 
 header nav{
-        min-width: 992px;
-        max-width: 1600px;
+        
+        
         display: flex;
         justify-content: space-around;
         padding-top: 15px;
@@ -38,9 +38,7 @@ nav ul{
     gap: 30px;
 }
 
-.color{
-    
-}
+
 
 
 nav ul a{
@@ -84,6 +82,10 @@ nav ul a:hover{
   
     
     
+}
+
+.hide{
+    display: none;
 }
 
 
@@ -173,8 +175,10 @@ nav ul a:hover{
 
 #banner{
     width: 100%;
+    background-position: center;
+    background-size: cover;
     background-image: url("../assets/hero-bg.png");
-    
+    background-position: center;
     max-height:800px;
     display: flex;
     flex-direction: column;
@@ -184,31 +188,59 @@ nav ul a:hover{
 
 }
 
-.banner-middle{
-    margin-top: 100px;
+
+
+
+
+
+.mic-container{
+ margin-top: 60px;
+    
+  position:relative;
+  width:280px;
+  height:280px;
 }
 
-#banner h2{
+
+.bg-circle{
+  width:100%;
+  height:100%;
+}
+
+
+.mic-icon{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  width:90px;
+}
+
+
+.new-badge{
+  position:absolute;
+  top:10px;
+  right:10px;
+  background:#00ff9c;
+  color:#000;
+  font-size:14px;
+  font-weight:bold;
+  padding:6px 14px;
+  border-radius:20px;
+}
+
+
+#banner h1{
     color: #FFFFFF;
     font-weight: 800;
     font-size: 60px;
+    margin-top: 40px;
 }
 
 #banner p{
     color: #FFFFFF;
     margin-top: 10px;
     font-size: 16px;
-}
-
-.box{
-    position: relative;
-
-}
-
-.microphone{
-    top: -260px;
-    right: -110px;
-    
 }
 
 
@@ -465,7 +497,9 @@ nav ul a:hover{
 
 footer{
     background-image: url(../assets/footer-bg.png);
-    width:100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
     height: 412px;
     background-repeat: no-repeat;
     display: flex;
@@ -475,7 +509,7 @@ footer{
 
 footer h2{
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
     
 }
 
@@ -484,6 +518,7 @@ footer h2{
     display: flex;
     gap: 40px;
     justify-content: center;
+    
     
 }
 
@@ -503,6 +538,173 @@ footer h2{
     margin-top: 32px;
 }
 
+
+@media screen and (max-width:576px) {
+
+    header nav{
+       max-width: 576px;
+       display: flex;
+       justify-content: space-around;
+    }
+
+    header nav ul,.btn{
+        display: none;
+    }
+
+    .hide{
+        display: block;
+    }
+
+     header nav h2{
+        display: flex;
+        justify-content: flex-start;
+     }
+
+
+
+     #banner{
+        width: 576px;
+        background-size: contain;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-color: #1A0B2E;
+        
+            
+        
+     }
+
+    .mic-container{
+ margin-top: 60px;
+  margin-top: 10px;  
+  position:relative;
+  width:200px;
+  height:200px;
+}
+
+.mic-icon{
+    width: 30%;
+    height: 45%;
+}
+
+
+.bg-circle{
+  width:100%;
+  height:100%;
+}
+
+    #banner h1{
+        font-size: 48px;
+        
+
+    }
+#banner p{
+    font-size: 12px;
+}
+    .why-card{
+        margin: 0 auto;
+    width: 380px;
+    display: grid;
+    grid-template-areas: " card1" 
+                        " card2"
+                        " card3"
+                        "card4"
+                        "card5"
+        ;
+}
+ 
+
+.why-us{
+    width: 576px;
+    margin: 0 auto;
+    
+}
+
+
+.why-us h2{
+    font-size: 32px;
+}
+
+.about-number{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.about-number h2{
+    font-size: 32px;
+
+}
+
+.about-number p{
+    font-size: 12px;
+
+}
+
+
+.about-content h2{
+    font-size: 32px;
+}
+
+.about-content p{
+    font-size: 12px;
+    width: 380px;
+}
+
+#About{
+    height: 700px;
+
+}
+
+
+    #feature{
+        width: 576px;
+        height: 2800px;
+    }
+
+    #feature h2{
+        font-size: 32px;
+    }
+ 
+    
+    .video{
+        width: 380px;
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    .host-content{
+        width: 380px;
+        flex-direction: column;
+        text-align: center;
+        margin: 0 auto;
+        
+    }
+
+    .foot{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .foot p{
+        font-size: 20px;
+
+    }
+   
+    .copy{
+        font-size: 20px;
+    }
+
+    footer{
+        width: 576px;
+        background-size: contain;
+        background-color: #220942;
+
+        
+    }
+
+   
+   
+    
+}
 
 
 
