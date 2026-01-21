@@ -195,26 +195,45 @@ nav ul a:hover{
 
 
 .mic-container{
- margin-top: 60px;
-    
-  position:relative;
-  width:280px;
-  height:280px;
+margin-top: 60px;
+position:relative;
+width:280px;
+height:280px;
 }
 
 
 .bg-circle{
   width:100%;
   height:100%;
+  display:flex;                 
+  justify-content:center;
+  align-items:center;
+
+  position:relative;
 }
 
 
 .mic-icon{
+
+  width:120px;
   position:absolute;
-  top:50%;
-  left:50%;
+  top:28%;
+  left:35%;
   transform:translate(-50%, -50%);
   width:90px;
+   animation: micRotate 6s linear infinite;
+   transform-origin: center;
+}
+
+@keyframes micRotate{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+
+  
 }
 
 
@@ -228,6 +247,20 @@ nav ul a:hover{
   font-weight:bold;
   padding:6px 14px;
   border-radius:20px;
+  animation: badgeFloat 1s ease-in-out infinite;
+}
+
+
+@keyframes badgeFloat{
+  0%{
+    transform: translateY(0) scale(1);
+  }
+  50%{
+    transform: translateY(-6px) scale(1.05);
+  }
+  100{
+    transform: translateY(0) scale(1);
+  }
 }
 
 
@@ -307,15 +340,19 @@ nav ul a:hover{
 }
 
 .why{
-    width:100%;
+    
+    max-width: 100%;
+    
     background-color: #230E3D;
 
 
 }
 
 .why-us{
-    width: 1100px;
+    max-width: 1600px;
     margin: 0 auto;
+    padding: 0 8%;
+    padding-bottom: 100px;
     background-color: #230E3D;
     
     
@@ -333,11 +370,13 @@ nav ul a:hover{
 
 
 .common{
-    background-color: #351165 ;
-    border: 1px solid #351165 ;
-    margin: 10px;
-    padding: 80px 40px;
+    background-color: #280b4c ;
+    border: 1px solid #280b4c ;
     border-radius: 40px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
     
     
@@ -349,42 +388,62 @@ nav ul a:hover{
     color: #FFFFFF;
     margin-top: 16px;
 }
-
+.common img{
+    width: 50px;
+    height: 50px;
+}
 .common p{
     font-size: 16px;
     line-height: 24px;
     color: #FFFFFF;
     margin-top: 16px;
+    opacity: 60%;
     
 }
 
 .card1{
+    
     grid-area: card1;
+    min-height: 480px;
+    padding-left: 40px;
 }
 
 
 .card2{
-    grid-area: card2;
+      grid-area: card2;
+    min-height: 230px;
+    padding-left: 40px;
+    
+    
 }
 
 .card3{
-    grid-area: card3;
+         grid-area: card3;
+    min-height: 230px;
+    padding-left: 40px;
 }
 
 .card4{
     grid-area: card4;
+    min-height: 250px;
+    padding-left: 40px;
 }
 
 .card5{
-    grid-area: card5;
+     grid-area: card5;
+    min-height: 250px;
+    padding-left: 40px;
+   
 }
 
 .why-card{
-    display: grid;
-    grid-template-areas: " card1 card2 card2" 
-                        " card1 card3 card3"
-                        " card4 card4 card5"
-                           ;
+     display: grid;
+    grid-template-columns: 250px 1fr 1fr;
+    grid-template-areas:
+        "card1 card2 card2"
+        "card1 card3 card3"
+        "card4 card4 card5";
+    gap: 24px;
 }
 
 
@@ -535,14 +594,21 @@ footer h2{
     display: flex;
     gap: 8px;
     color: #FFFFFF;
+   
     
     
 }
 
+
+.icon1 p{
+     opacity: 60%;
+
+}
 .copy{
     text-align: center;
     color: #FAFAFA;
     font-size: 16px;
+    opacity: 60%;
     margin-top: 32px;
 }
 
@@ -550,9 +616,10 @@ footer h2{
 @media screen and (max-width:576px) {
 
     header nav{
-       max-width: 576px;
+       width: 576px;
+       
        display: flex;
-       justify-content: space-around;
+       justify-content:space-between;
     }
 
     header nav ul,.btn{
@@ -561,11 +628,13 @@ footer h2{
 
     .hide{
         display: block;
+        padding-right: 20px;
     }
 
      header nav h2{
         display: flex;
         justify-content: flex-start;
+        padding-left: 20px;
      }
 
 
@@ -581,7 +650,9 @@ footer h2{
         
      }
 
-    .mic-container{
+
+
+.mic-container{
  margin-top: 60px;
   margin-top: 10px;  
   position:relative;
@@ -600,17 +671,36 @@ footer h2{
   height:100%;
 }
 
+
+.btnn .btn1{
+    width:220px;
+    display: flex;
+    justify-content: center;
+     font-size: 16px;
+}
+
+.btnn .btn2{
+    width:180px;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+
+
     #banner h1{
-        font-size: 48px;
+        font-size: 50px;
         
 
     }
 #banner p{
-    font-size: 12px;
+    font-size: 20px;
+    text-align: center;
+    opacity: 80%;
 }
     .why-card{
-        margin: 0 auto;
-    width: 380px;
+     height: auto;
+    margin: 0 auto;
+    width: 400px;
     display: grid;
     grid-template-areas: " card1" 
                         " card2"
@@ -620,16 +710,31 @@ footer h2{
         ;
 }
  
+.common{
+    width: 400px;
+    height: auto;
+    padding: 40px 20px;
+}
 
-.why-us{
-    width: 576px;
+.card5{
+    margin-bottom: 42px;
+}
+
+
+
+
+
+
+.why{
+    min-width: 576px;
     margin: 0 auto;
     
 }
 
 
 .why-us h2{
-    font-size: 32px;
+    font-size: 42px;
+    
 }
 
 .about-number{
@@ -637,68 +742,121 @@ footer h2{
     grid-template-columns: repeat(2,1fr);
 }
 .about-number h2{
-    font-size: 32px;
+    font-size: 42px;
+    margin-top: -40px;
+    
+    
 
 }
 
 .about-number p{
-    font-size: 12px;
+    font-size: 18px;
+    margin-top: 10px;
+    
 
 }
 
 
 .about-content h2{
-    font-size: 32px;
+    font-size: 42px;
+    margin-top: -40px;
 }
 
 .about-content p{
-    font-size: 12px;
+    font-size: 16px;
     width: 380px;
+    opacity: 80%;
+    line-height: 22px;
+    margin-bottom: -40px;
+    
 }
 
 #About{
-    height: 700px;
+    width: 576px;
+    height: 600px;
 
 }
 
 
     #feature{
         width: 576px;
-        height: 2800px;
+        height: 2300px;
+        
     }
 
     #feature h2{
-        font-size: 32px;
+        font-size: 42px;
+        
     }
  
     
     .video{
-        width: 380px;
+        width: 400px;
         display: flex;
         gap: 30px;
         flex-direction: column;
+        align-items: center;
     }
 
+    .card{
+        width: 420px;
+    }
+
+   .card h4{
+    font-size: 24px;
+    width: 400px;
+   }
+
+     .card #paragraph{
+    font-size: 18px;
+    width: 400px;
+   }
+
     .host-content{
-        width: 380px;
+        width: 400px;
         flex-direction: column;
+        align-items: center;
         text-align: center;
         margin: 0 auto;
+        margin-bottom: 20px;
         
     }
 
+    .host-images{
+        width: 150px;
+        height: 150px;
+    }
+
+    .icon{
+        display: flex;
+        justify-content: center;
+    }
+
+
+
     .foot{
-        width: 440px;
+        width: 300px;
        display: flex;
        flex-wrap: wrap;
        justify-content: center;
        align-items: center;
+       margin: 0 auto;
+       
     }
 
     .icon1{
-        width: 200px;
+        width: 80px;
 
     }
+
+    .t{
+         width: 150px;
+    }
+
+     .icon1 img{
+        width: 24px;
+        height: 24px;
+     }
 
     .foot p{
         font-size: 20px;
@@ -716,6 +874,8 @@ footer h2{
 
         
     }
+
+   
 
    
    
